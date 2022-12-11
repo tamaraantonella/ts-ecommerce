@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Cart } from "./Cart";
 export function Navbar() {
   return (
     <nav
@@ -34,6 +35,7 @@ export function Navbar() {
             Store
           </Link>
         </li>
+        <li><Cart/></li>
       </ul>
     </nav>
   );
