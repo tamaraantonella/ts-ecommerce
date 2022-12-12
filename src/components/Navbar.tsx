@@ -5,7 +5,7 @@ export function Navbar() {
   return (
     <nav
       aria-label="Site Nav"
-      className="mx-auto flex max-w-3xl items-center justify-between p-4 sticky top-0">
+      className="mx-auto flex  items-center justify-between py-4 sticky top-0 bg-white">
       <Link
         to="/"
         className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-gray-100">
