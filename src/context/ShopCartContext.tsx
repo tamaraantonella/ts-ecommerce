@@ -1,5 +1,6 @@
 import { createContext, ReactNode, useContext } from "react";
 import React from "react";
+import { ShoppingCart } from "../components/ShoppingCart";
 
 const ShoppingCartContext = createContext({} as ShopCartContext);
 
@@ -78,6 +79,7 @@ export function ShoppingCartProvider({ children }: ShopCartProviderProps) {
         cartTotal: cart,
       }}>
       {children}
+    {isOpen && <ShoppingCart/>}
     </ShoppingCartContext.Provider>
   );
 }
