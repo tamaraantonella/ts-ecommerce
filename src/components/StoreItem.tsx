@@ -26,7 +26,12 @@ export function StoreItem(props: StoreItemProps) {
     title,
     thumbnail,
   } = props;
-  const { getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeItemFromCart } = useShoppingCart();
+  const {
+    getItemQuantity,
+    increaseCartQuantity,
+    decreaseCartQuantity,
+    removeItemFromCart,
+  } = useShoppingCart();
   const quantity = getItemQuantity(id);
   return (
     <div className="bg-white rounded-lg shadow-lg">
@@ -55,7 +60,7 @@ export function StoreItem(props: StoreItemProps) {
             {quantity === 0 ? (
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                onClick={() => increaseCartQuantity(id,stock)}>
+                onClick={() => increaseCartQuantity(id, stock)}>
                 Add to Cart
               </button>
             ) : (
@@ -69,11 +74,15 @@ export function StoreItem(props: StoreItemProps) {
                   <div>{quantity}</div>
                   <button
                     className="bg-blue-500 hover:bg-blue-700 text-white font-bold  px-2 rounded"
-                    onClick={() => increaseCartQuantity(id,stock)}>
+                    onClick={() => increaseCartQuantity(id, stock)}>
                     +
                   </button>
                 </div>
-                <button onClick={() => removeItemFromCart(id)}>Remove</button>
+                <button
+                  onClick={() => removeItemFromCart(id)}
+                  className="px-2 py-1 bg-red-500 text-white rounded-md">
+                  Remove
+                </button>
               </div>
             )}
           </div>
