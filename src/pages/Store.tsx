@@ -4,7 +4,6 @@ import { StoreItem } from "../components/StoreItem";
 
 export function Store() {
   const { data, isLoading, status } = useGetProducts();
-  console.log(data);
   return (
     <div className="mx-auto w-full font-sans">
       <h1 className="text-xl font-semibold mb-5">Store</h1>
